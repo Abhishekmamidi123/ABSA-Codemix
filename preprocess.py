@@ -10,7 +10,6 @@ def readData(file_name):
 
 def extractTaggedText():
 	for tweet in data:
-		print tweet['lang_tagged_text']
 		f.write(tweet['lang_tagged_text'].encode('utf-8'))
 		f.write('\n')
 
