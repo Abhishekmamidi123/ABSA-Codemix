@@ -24,31 +24,5 @@ for root, dirs, filenames in os.walk(source):
 		except:	
 			pass			
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''for root, dirs, filenames in os.walk(source):
-    for f in filenames:
-        print f
-	fullpath=os.path.join(source,f)
-	r=open(fullpath,'r')
-	for i in r:
-		actual_file.write(i)
-	actual_file.write("-----------------------------------------------------------------------")	
 		
-'''
+		
