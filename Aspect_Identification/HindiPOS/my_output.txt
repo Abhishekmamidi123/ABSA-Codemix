@@ -1,1 +1,1 @@
-वर्षों	वर्ष	NN	0	n	m	pl	3	o
+है	है	VM	है	v	any	sg	2	

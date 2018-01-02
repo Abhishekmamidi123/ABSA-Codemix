@@ -2,11 +2,11 @@ import os
 import nltk
 from nltk.tag import pos_tag
 
-text_file = open("../data/hindiTransliteratedData.txt", "r")
+text_file = open("../data/Hi.txt", "r")
 hindiData = text_file.readlines()
 print 'Completed reading Hindi Transliterated data.'
 print 'Reading tweets to find POS tags'
-path='../data/tag_text.txt'
+path='../data/En.txt'
 with open(path) as f:
 	lineCount=0
 	for line in f:
