@@ -4680,8 +4680,8 @@
         "sentiment": 1
     }, 
     {
-        "text": "#railway fair not increased so it is not mean that #railbudget2015 is good #prabhukirail", 
-        "lang_tagged_text": "#\\UN railway\\EN fair\\EN not\\EN increased\\EN so\\EN it\\EN is\\EN not\\EN mean\\EN that\\EN #\\UN railbudget2015\\EN is\\EN good\\EN #\\UN prabhukirail\\UN ", 
+        "text": "#railway fare not increased so it is not mean that #railbudget2015 is good #prabhukirail", 
+        "lang_tagged_text": "#\\UN railway\\EN fare\\EN not\\EN increased\\EN so\\EN it\\EN is\\EN not\\EN mean\\EN that\\EN #\\UN railbudget2015\\EN is\\EN good\\EN #\\UN prabhukirail\\UN ", 
         "id": 5635, 
         "sentiment": -1
     }, 
@@ -5430,8 +5430,8 @@
         "sentiment": -1
     }, 
     {
-        "text": "loveeeeeeeeeeeeeeeeeeeeeeee uuuuuuuuuu salmaannnnnnnnmnmm sir", 
-        "lang_tagged_text": "loveeeeeeeeeeeeeeeeeeeeeeee\\EN uuuuuuuuuu\\EN salmaannnnnnnnmnmm\\EN sir\\EN ", 
+        "text": "loveeeeeeeeeeeeeeeeeeeeeeee uuuuuuuuuu salman sir", 
+        "lang_tagged_text": "loveeeeeeeeeeeeeeeeeeeeeeee\\EN uuuuuuuuuu\\EN salman\\EN sir\\EN ", 
         "id": 12932, 
         "sentiment": 1
     }, 
@@ -5472,8 +5472,8 @@
         "sentiment": -1
     }, 
     {
-        "text": "Han di.  Man to bohot hai mera ghimne ka ", 
-        "lang_tagged_text": "Han\\HI di\\HI .\\UN Man\\HI to\\HI bohot\\HI hai\\HI mera\\HI ghimne\\HI ka\\HI ", 
+        "text": "Han di.  Man to bohot hai mera ghumne ka ", 
+        "lang_tagged_text": "Han\\HI di\\HI .\\UN Man\\HI to\\HI bohot\\HI hai\\HI mera\\HI ghumne\\HI ka\\HI ", 
         "id": 2783, 
         "sentiment": -1
     }, 
@@ -5712,8 +5712,8 @@
         "sentiment": -1
     }, 
     {
-        "text": "Salllluuuu i love u....plzzzz ek bar apne apse milne do...plzzzzzz", 
-        "lang_tagged_text": "Salllluuuu\\EN i\\EN love\\EN u\\EN ....\\UN plzzzz\\EN ek\\HI bar\\HI apne\\HI apse\\HI milne\\HI do\\HI ...\\UN plzzzzzz\\EN ", 
+        "text": "Sallu i love u....plzzzz ek bar apne apse milne do...plzzzzzz", 
+        "lang_tagged_text": "Sallu\\EN i\\EN love\\EN u\\EN ....\\UN plzzzz\\EN ek\\HI bar\\HI apne\\HI apse\\HI milne\\HI do\\HI ...\\UN plzzzzzz\\EN ", 
         "id": 372, 
         "sentiment": 1
     }, 
@@ -6384,8 +6384,8 @@
         "sentiment": 1
     }, 
     {
-        "text": "chor kamina kejriwala congress k corruption k bareme bolke 28seats kamaya aur congress k 8seat k support leka cm bangaya .  . ", 
-        "lang_tagged_text": "chor\\HI kamina\\HI kejriwala\\UN congress\\EN k\\EN corruption\\EN k\\EN bareme\\HI bolke\\HI 28seats\\EN kamaya\\HI aur\\HI congress\\EN k\\HI 8seat\\EN k\\HI support\\EN leka\\HI cm\\HI bangaya\\HI .\\UN .\\UN ", 
+        "text": "chor kamina kejriwal congress k corruption k bareme bolke 28seats kamaya aur congress k 8seat k support leka cm bangaya .  . ", 
+        "lang_tagged_text": "chor\\HI kamina\\HI kejriwal\\UN congress\\EN k\\EN corruption\\EN k\\EN bareme\\HI bolke\\HI 28seats\\EN kamaya\\HI aur\\HI congress\\EN k\\HI 8seat\\EN k\\HI support\\EN leka\\HI cm\\HI bangaya\\HI .\\UN .\\UN ", 
         "id": 11346, 
         "sentiment": -1
     }, 
@@ -9702,8 +9702,8 @@
         "sentiment": -1
     }, 
     {
-        "text": "Tera interestg websiteg developmentg mein hai ", 
-        "lang_tagged_text": "Tera\\HI interestg\\EN websiteg\\EN developmentg\\EN mein\\HI hai\\HI ", 
+        "text": "Tera interestg website development mein hai ", 
+        "lang_tagged_text": "Tera\\HI interestg\\EN website\\EN development\\EN mein\\HI hai\\HI ", 
         "id": 11625, 
         "sentiment": -1
     }, 
@@ -10092,8 +10092,8 @@
         "sentiment": 1
     }, 
     {
-        "text": "Sakshee SharmaSharma ... kuttiya saali .... still 3yrs more 4me ... huhhh ", 
-        "lang_tagged_text": "Sakshee\\HI SharmaSharma\\HI ...\\UN kuttiya\\HI saali\\HI ....\\UN still\\EN 3yrs\\EN more\\EN 4me\\EN ...\\UN huhhh\\HI ", 
+        "text": "Sakshee Sharma ... kuttiya saali .... still 3yrs more 4me ... huhhh ", 
+        "lang_tagged_text": "Sakshee\\HI Sharma\\HI ...\\UN kuttiya\\HI saali\\HI ....\\UN still\\EN 3yrs\\EN more\\EN 4me\\EN ...\\UN huhhh\\HI ", 
         "id": 605, 
         "sentiment": -1
     }, 
@@ -10380,8 +10380,8 @@
         "sentiment": 1
     }, 
     {
-        "text": "dharti pe vinashkaari tatv hai ye .  .  .  ban all udbilao before worldcups", 
-        "lang_tagged_text": "dharti\\HI pe\\HI vinashkaari\\HI tatv\\HI hai\\HI ye\\HI .\\UN .\\UN .\\UN ban\\HI all\\HI udbilao\\HI before\\EN worldcups\\EN ", 
+        "text": "dharti pe vinashkaari ta tv hai ye .  .  .  ban all udbilao before worldcups", 
+        "lang_tagged_text": "dharti\\HI pe\\HI vinashkaari\\HI ta\\HI tv\\HI hai\\HI ye\\HI .\\UN .\\UN .\\UN ban\\HI all\\HI udbilao\\HI before\\EN worldcups\\EN ", 
         "id": 955, 
         "sentiment": -1
     }, 
@@ -10764,8 +10764,8 @@
         "sentiment": 1
     }, 
     {
-        "text": "Saare jahan se achha hindustaa hamara", 
-        "lang_tagged_text": "Saare\\HI jahan\\HI se\\HI achha\\HI hindustaa\\HI hamara\\HI ", 
+        "text": "Saare jahan se achha hindustan hamara", 
+        "lang_tagged_text": "Saare\\HI jahan\\HI se\\HI achha\\HI hindustan\\HI hamara\\HI ", 
         "id": 483, 
         "sentiment": 1
     }, 
@@ -12612,8 +12612,8 @@
         "sentiment": 1
     }, 
     {
-        "text": "plzz slaman jrur aana onlin or plzz jrur baat krna apne fans se plzzz..plzzzz...", 
-        "lang_tagged_text": "plzz\\HI slaman\\HI jrur\\HI aana\\HI onlin\\HI or\\HI plzz\\HI jrur\\HI baat\\HI krna\\HI apne\\HI fans\\HI se\\HI plzzz\\HI ..\\UN plzzzz\\HI ...\\UN ", 
+        "text": "plzz salman jrur aana onlin or plzz jrur baat krna apne fans se plzzz..plzzzz...", 
+        "lang_tagged_text": "plzz\\HI salman\\HI jrur\\HI aana\\HI onlin\\HI or\\HI plzz\\HI jrur\\HI baat\\HI krna\\HI apne\\HI fans\\HI se\\HI plzzz\\HI ..\\UN plzzzz\\HI ...\\UN ", 
         "id": 5756, 
         "sentiment": 1
     }, 
@@ -15372,8 +15372,8 @@
         "sentiment": 1
     }, 
     {
-        "text": "Salmaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaan ajhooo 4 ghanto se apka wait kar rahi hu", 
-        "lang_tagged_text": "Salmaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaan\\UN ajhooo\\HI 4\\UN ghanto\\HI se\\HI apka\\HI wait\\EN kar\\HI rahi\\HI hu\\HI ", 
+        "text": "Salman ajhooo 4 ghanto se apka wait kar rahi hu", 
+        "lang_tagged_text": "Salman\\UN ajhooo\\HI 4\\UN ghanto\\HI se\\HI apka\\HI wait\\EN kar\\HI rahi\\HI hu\\HI ", 
         "id": 7067, 
         "sentiment": -1
     }, 
@@ -16470,8 +16470,8 @@
         "sentiment": 1
     }, 
     {
-        "text": "sugam bhaiiii ,  ye harampana kitni baar kiya hai koi ginti hi nai .  .  :p", 
-        "lang_tagged_text": "sugam\\UN bhaiiii\\HI ,\\UN ye\\HI harampana\\HI kitni\\HI baar\\HI kiya\\HI hai\\HI koi\\HI ginti\\HI hi\\EN nai\\HI .\\UN .\\UN :\\UN p\\HI ", 
+        "text": "sugam bhai ,  ye harampana kitni baar kiya hai koi ginti hi nai .  .  :p", 
+        "lang_tagged_text": "sugam\\UN bhai\\HI ,\\UN ye\\HI harampana\\HI kitni\\HI baar\\HI kiya\\HI hai\\HI koi\\HI ginti\\HI hi\\EN nai\\HI .\\UN .\\UN :\\UN p\\HI ", 
         "id": 9074, 
         "sentiment": -1
     }, 
@@ -16860,8 +16860,8 @@
         "sentiment": 1
     }, 
     {
-        "text": "new add or bhi mast h", 
-        "lang_tagged_text": "new\\EN add\\EN or\\EN bhi\\HI mast\\HI h\\HI ", 
+        "text": "new ad or bhi mast h", 
+        "lang_tagged_text": "new\\EN ad\\EN or\\EN bhi\\HI mast\\HI h\\HI ", 
         "id": 7546, 
         "sentiment": 1
     }, 
@@ -16932,8 +16932,8 @@
         "sentiment": 1
     }, 
     {
-        "text": "Mereko dis projectg ka or dimag kharab hora hai ", 
-        "lang_tagged_text": "Mereko\\HI dis\\EN projectg\\EN ka\\HI or\\HI dimag\\HI kharab\\HI hora\\HI hai\\HI ", 
+        "text": "Mereko dis project ka or dimag kharab hora hai ", 
+        "lang_tagged_text": "Mereko\\HI dis\\EN project\\EN ka\\HI or\\HI dimag\\HI kharab\\HI hora\\HI hai\\HI ", 
         "id": 11607, 
         "sentiment": -1
     }, 
@@ -17070,8 +17070,8 @@
         "sentiment": -1
     }, 
     {
-        "text": "pyar .  .  .  .  .  .  .  .  .  .  .  .  .  mom \" s love is beyond imegination .  .  .  .  .  . ", 
-        "lang_tagged_text": "pyar\\HI .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN mom\\HI \"\\UN s\\EN love\\HI is\\EN beyond\\EN imegination\\HI .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN ", 
+        "text": "pyar .  .  .  .  .  .  .  .  .  .  .  .  .  mom's love is beyond imegination .  .  .  .  .  . ", 
+        "lang_tagged_text": "pyar\\HI .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN mom's\\EN love\\HI is\\EN beyond\\EN imegination\\HI .\\UN .\\UN .\\UN .\\UN .\\UN .\\UN ", 
         "id": 9506, 
         "sentiment": 1
     }, 
@@ -17874,8 +17874,8 @@
         "sentiment": -1
     }, 
     {
-        "text": "stop compaining others do it by yourself . u do have these issues . arvind kejriwal", 
-        "lang_tagged_text": "stop\\EN compaining\\EN others\\EN do\\EN it\\EN by\\EN yourself\\EN .\\UN u\\HI do\\EN have\\EN these\\EN issues\\EN .\\UN arvind\\UN kejriwal\\UN ", 
+        "text": "stop complaining others do it by yourself . u do have these issues . arvind kejriwal", 
+        "lang_tagged_text": "stop\\EN complaining\\EN others\\EN do\\EN it\\EN by\\EN yourself\\EN .\\UN u\\HI do\\EN have\\EN these\\EN issues\\EN .\\UN arvind\\UN kejriwal\\UN ", 
         "id": 1003, 
         "sentiment": -1
     }, 
@@ -18840,8 +18840,8 @@
         "sentiment": 1
     }, 
     {
-        "text": "jabatdast dost .  .  .  .  1 page me rula diya yaar .  .  .  .  . kamaal hai .  .  .  . superb nd hatss off to ur crearivity .  .  . ", 
-        "lang_tagged_text": "jabatdast\\HI dost\\HI .\\UN .\\UN .\\UN .\\UN 1\\UN page\\EN me\\HI rula\\HI diya\\HI yaar\\HI .\\UN .\\UN .\\UN .\\UN .\\UN kamaal\\HI hai\\HI .\\UN .\\UN .\\UN .\\UN superb\\EN nd\\EN hatss\\EN off\\EN to\\EN ur\\EN crearivity\\EN .\\UN .\\UN .\\UN ", 
+        "text": "jabatdast dost .  .  .  .  1 page me rula diya yaar .  .  .  .  . kamaal hai .  .  .  . superb nd hatss off to ur creativity .  .  . ", 
+        "lang_tagged_text": "jabatdast\\HI dost\\HI .\\UN .\\UN .\\UN .\\UN 1\\UN page\\EN me\\HI rula\\HI diya\\HI yaar\\HI .\\UN .\\UN .\\UN .\\UN .\\UN kamaal\\HI hai\\HI .\\UN .\\UN .\\UN .\\UN superb\\EN nd\\EN hatss\\EN off\\EN to\\EN ur\\EN creativity\\EN .\\UN .\\UN .\\UN ", 
         "id": 2786, 
         "sentiment": 1
     }, 
@@ -19344,8 +19344,8 @@
         "sentiment": 1
     }, 
     {
-        "text": "India's superheroSALMAN KHAN. N ourJAAN", 
-        "lang_tagged_text": "India's\\EN superheroSALMAN\\EN KHAN\\HI .\\UN N\\HI ourJAAN\\HI ", 
+        "text": "India's superhero SALMAN KHAN. N ourJAAN", 
+        "lang_tagged_text": "India's\\EN superhero\\EN SALMAN\\EN KHAN\\HI .\\UN N\\HI ourJAAN\\HI ", 
         "id": 4057, 
         "sentiment": 1
     }, 
@@ -22014,8 +22014,8 @@
         "sentiment": -1
     }, 
     {
-        "text": "for middle class #unionbudget2015 fully contrary &amp; after this hick in petrol &amp; diesel price destroy the budget of common man.", 
-        "lang_tagged_text": "for\\EN middle\\EN class\\EN #\\UN unionbudget2015\\EN fully\\EN contrary\\EN &\\UN amp\\EN ;\\UN after\\EN this\\EN hick\\EN in\\EN petrol\\EN &\\UN amp\\EN ;\\UN diesel\\EN price\\EN destroy\\EN the\\EN budget\\EN of\\EN common\\EN man\\EN .\\UN ", 
+        "text": "for middle class #unionbudget2015 fully contrary &amp; after this hike in petrol &amp; diesel price destroy the budget of common man.", 
+        "lang_tagged_text": "for\\EN middle\\EN class\\EN #\\UN unionbudget2015\\EN fully\\EN contrary\\EN &\\UN amp\\EN ;\\UN after\\EN this\\EN hike\\EN in\\EN petrol\\EN &\\UN amp\\EN ;\\UN diesel\\EN price\\EN destroy\\EN the\\EN budget\\EN of\\EN common\\EN man\\EN .\\UN ", 
         "id": 9921, 
         "sentiment": -1
     }, 
@@ -22380,7 +22380,7 @@
         "sentiment": 1
     }, 
     {
-        "text": "Itni energy vaala perhaps he koi p.m.raha ho india ka, aapkey liyye bhagvaan se prey kertey hai, sabka saath... Sabka vikas....jai ho", 
+        "text": "Itni energy vaala perhaps he koi p.m. raha ho india ka, aapkey liyye bhagvaan se prey kertey hai, sabka saath... Sabka vikas....jai ho", 
         "lang_tagged_text": "Itni\\HI energy\\EN vaala\\HI perhaps\\EN he\\HI koi\\HI p\\EN .\\UN m\\EN .\\UN raha\\HI ho\\HI india\\EN ka\\HI ,\\UN aapkey\\HI liyye\\HI bhagvaan\\HI se\\HI prey\\EN kertey\\HI hai\\HI ,\\UN sabka\\HI saath\\HI ...\\UN Sabka\\HI vikas\\HI ....\\UN jai\\HI ho\\HI ", 
         "id": 1623, 
         "sentiment": 1
@@ -31512,8 +31512,8 @@
         "sentiment": 1
     }, 
     {
-        "text": "@gurmeetramrahim #blockbustermsg same to u papa g nd thanksss for ur such a lovely wiahes happy mahashivratri papa g", 
-        "lang_tagged_text": "@\\UN gurmeetramrahim\\UN #\\UN blockbustermsg\\EN same\\EN to\\EN u\\EN papa\\EN g\\HI nd\\EN thanksss\\EN for\\EN ur\\HI such\\EN a\\EN lovely\\HI wiahes\\EN happy\\HI mahashivratri\\HI papa\\EN g\\HI ", 
+        "text": "@gurmeetramrahim #blockbustermsg same to u papa g nd thanksss for ur such a lovely wishes happy mahashivratri papa g", 
+        "lang_tagged_text": "@\\UN gurmeetramrahim\\UN #\\UN blockbustermsg\\EN same\\EN to\\EN u\\EN papa\\EN g\\HI nd\\EN thanksss\\EN for\\EN ur\\HI such\\EN a\\EN lovely\\HI wishes\\EN happy\\HI mahashivratri\\HI papa\\EN g\\HI ", 
         "id": 4964, 
         "sentiment": 1
     }, 
