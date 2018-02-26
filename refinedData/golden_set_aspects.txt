@@ -11,7 +11,7 @@ place|jagah
 couple
 counties
 
-Salman|salman
+Salman
 
 virat|raina
 pic
@@ -31,10 +31,10 @@ Sallu miya
 life
 salman khan
 
-NOT 
+
 brook lopez
 everybody
-florida mall , orlando
+florida mall|orlando
 Logical Indian
 
 
@@ -51,14 +51,14 @@ bhagavad gita
 atalji
 
 
-faadu stciker
+faadu sticker
 arrest
-kejrival|delhi
+kejriwal|delhi
 bhai
 
 halat
 
-pakistan ke log
+pakistan k log
 
 fan
 
@@ -91,7 +91,7 @@ suicide
 
 proffesor
 
-salmankhan
+salman khan
 
 
 
@@ -102,7 +102,7 @@ narendra modi ji
 hinglish mata
 
 
-samajdhar
+smjhdar
 
 films
 
@@ -156,7 +156,7 @@ cnfsn
 kaladhan
 runman
 
-movie
+movei
 
 placement
 
@@ -287,7 +287,9 @@ bat
 india
 mitch lucker
 comment
-india
+bajrang bali
+
+
 
 celebration
 
@@ -300,8 +302,6 @@ dr .  mohamed morsi===
 anna ji
 
 papa
-
-
 
 
 bechaini
@@ -385,7 +385,7 @@ mobile internet
 film
 bhai
 pakistan
-kejrival
+kejriwal
 
 
 
@@ -507,8 +507,8 @@ political parties
 
 =====
 =====
+
 saturday night
-=====
 sarkar
 
 3rd year
@@ -522,7 +522,7 @@ new york
 love =====
 Salman
 
-government school
+govt school
 
 musalman
 abishek bachan
@@ -565,13 +565,13 @@ pk movie
 
 paise
 =====
-choza booza|monk|kid
+chooza booza|monk|kid
 day
 =====
 kaam chor|free ka khane wale
 guddu
 trailer
-electricty|delhi|uttar pradesh
+electricity|delhi|uttar pradesh
 =====
 
 Salman
@@ -843,7 +843,7 @@ line
 
 windows 8
 results
-rahul
+express-rahul
 ==
 ===
 
@@ -913,11 +913,11 @@ duniya
 ghumne
 beta
 job
-game|atmospehre|cards
+game|atmosphere|cards
 power
 india
 ===
-india
+#india
 moments
 ===
 ===
@@ -939,7 +939,7 @@ maya rudolph
 ===
 gf
 
-rahulgandhi
+#rahulgandhi
 Madam|Mahapurush
 
 ===
@@ -1035,50 +1035,50 @@ mind
 
 maa|bhaiyon
  delhi
- Salman khan|salman bhai|songs
+Salman khan|salman bhai|songs
  
- time
- moviee
- 
- ===
- 
- 
- ===
- 
- 
- 
- match
- 
- thanksgiving|halloween|===
- Modi
- 
- 
- prestige
- 
- sticker
- 
- 
- 
- 
- 
- channel
- kejriwal
- niggar
- babe|friendzoned
- 
- modimagic
- 
- 
- ===
- delhi
- ===
- ===
- 
- apman===
- ling nirdharan
- guddu
- 
- pk
+time
+moviee
+
+===
+
+
+===
+
+
+
+match
+
+thanksgiving|halloween|===
+Modi
+
+
+prestige
+
+sticker
+
+
+
+
+
+channel
+kejriwal
+niggar
+babe|friendzoned
+
+#modimagic
+
+
+===
+delhi
+===
+===
+
+apman===
+ling nirdharan
+guddu
+
+@pk
 ===
 bjp
 ===
@@ -1091,9 +1091,9 @@ manifesto
 round series
 ladkiya
 everyone
-beefban|cartoon
+#beefban|cartoon
 Salman
-aam admi|modi|bjp
+aam aadmi|modi|bjp
 celebrity juice
 kiran bedi
 
@@ -1233,7 +1233,7 @@ party
 ===
 ===
 
-salman
+salmaan
 ASHISH INANI
 bhai
 
@@ -1279,7 +1279,7 @@ film
 justin
 
 
-Home gaurd
+Home guard
 new year celebration
 nasib
 
@@ -1353,13 +1353,13 @@ guddu
 
 bachpan
 kreena sallu
-umseh yadav
+umesh yaadav's
 
 
 
 
 concert
-winas
+winans
 
 Movie
 bajrangbali
@@ -1514,9 +1514,9 @@ mummy|papa
 bill murray
 women
 event
-ramdev|swami
+ramdev|swamy
 bhai
-bjp
+#bjp
 ===
 Modi
 arbind kejriwal
@@ -1566,7 +1566,7 @@ sallu
 
 
 games
-wrd cup
+wrd cp
 
 football|dog's
 
@@ -1642,7 +1642,7 @@ man|words
 
 bhai
 ameen
-EID|film
+EID
 
 
 
@@ -1721,7 +1721,7 @@ salman khan
 rate
 
 modi
-halloween|thanksgiving|birthday|christmas|new year|valentines|st .  patrick's|april fools
+
 
 
 kejriwal
@@ -1817,13 +1817,13 @@ aap
 bajrangi bhaijaan|film
 maa
 
+
 tiger biscuits
 song|site
 Priya chawla Hny|family
 
 
 death
-
 
 
 
@@ -1848,7 +1848,7 @@ ladki
 
 
 record
-chinses maal
+chinese maal
 
 bhuwaneshwar kumar
 
@@ -1876,10 +1876,10 @@ shar
 salman
 log
 baltimore
-narendar mod
+narendar modi
 
 congress
-tushar gupta|mukund sharma|yaman sharma|piyush yadavs
+tushar gupta|mukund sharma|yaman sharma|piyush yadav
 salman
 salman khan
 
@@ -2007,9 +2007,9 @@ Aliya Khan
 post
 
 
-sonia
+soniya
 sir
-salman
+Bhai
 
 
 films
@@ -2081,7 +2081,7 @@ arbind kejiriwal
 salman
 story
 
-musalmano
+muslmano
 
 feels|video
 salman
@@ -2105,7 +2105,7 @@ salman
 mentality
 army
 ===
-flim
+film
 
 
 
@@ -2152,7 +2152,7 @@ Bhai
 
 
 marks|story
-garbage bin
+
 aap
 
 
@@ -2177,8 +2177,8 @@ bajarngi bhai jaan|Salman
 
 
 Modi
-salman
 
+salman
 
 bhashan
 Salman khan
@@ -2369,7 +2369,7 @@ guddu
 demag
 
 
-baigan
+baingan
 pic
 
 
@@ -2381,7 +2381,7 @@ president
 broom
 
 
-president
+
 
 girl
 
@@ -2483,8 +2483,8 @@ bharat|modhi
 
 
 
-
 concert
+
 
 
 
@@ -2503,7 +2503,7 @@ bjp supporters|aap
 posts|cmnts
 rugby
 iron man
-tension
+tention
 
 advertisement
 
@@ -2609,7 +2609,7 @@ salu
 
 couple
 
-vachano
+vachno
 
 scene
 
@@ -2737,7 +2737,7 @@ maa
 bhaijaan
 date
 ===
-talent
+
 bhai
 catholic
 
@@ -2808,7 +2808,7 @@ cosplay casino
 pyr
 
 ad
- Modi
+Modi
 bhai
 kiran bedi
 
@@ -2875,12 +2875,12 @@ cement
 ladki
 mom
 mac
-slaman
+salman
 eid
 admin
 ladkiya
-pak
-foje
+Pak foje
+punch
 
 EID
 ashwin|bowling
@@ -2969,7 +2969,7 @@ anna
 
 akhtar
 
-cheeta
+cheeeta
 
 bf
 modi
@@ -2985,7 +2985,7 @@ xam
 man
 ===
 valentine
-dekthe
+dekhte
 athens
 kejri
 fashion show
@@ -3121,7 +3121,7 @@ Salman
 admin|game of thrones
 Salman
 cup
-aam admi
+aam aadmi
 show
 
 
@@ -3175,7 +3175,7 @@ congress
 marsalis
 FILMO
 salman
-thursady|jenette
+thursday|jennette
 
 
 india
@@ -3259,7 +3259,7 @@ armpits
 
 legend
 salman
-free recherge
+free recharge
 
 people
 sallu
@@ -3428,7 +3428,7 @@ contra aur mario
 kejriwal
 
 
-salman khan
+salman
 
 guddu
 
@@ -3472,7 +3472,7 @@ game|knicks
 album
 stage
 log
-dancing parties|4th grade girls
+dance parties|4th grade girls
 anna
 
 
@@ -3514,7 +3514,7 @@ english
 
 meaning
 PM
-opnion
+opinion
 suspense
 likhte
 wide
@@ -3604,11 +3604,11 @@ player|week
 
 boy
 break
-bai|arrest
+bai
 samajh
 bjp
 ===
-wagonr!
+
 
 ghanta
 
@@ -3638,7 +3638,7 @@ Eid
 reggie|brides
 humor
 film
-football|dog
+football|dog's
 
 page
 
@@ -3648,8 +3648,8 @@ bhai
 
 india
 
-ddefined
-peroform
+defined
+perform
 
 chehre
 
@@ -3727,7 +3727,7 @@ shoaib akhtar
 
 
 talent
-p.m.
+
 summer
 sch
 
@@ -3760,7 +3760,7 @@ gavaskar
 dogs|babber sher
 movie
 section wale
-aap|evmmcahine
+aap|evmmachine
 salman khan
 
 feel
@@ -3783,9 +3783,9 @@ facebook
 tata|infosys
 thursday
 mobile internet
+
 parsasan
 guddu
-
 
 statement
 naam
@@ -3817,11 +3817,11 @@ gary carter
 match
 cockroach
 psycho
-commentry
+commentary
 time
 
 family
-salman khan
+salman
 budget
 
 song|avril lavigne
@@ -3871,7 +3871,7 @@ zameen
 
 manifesto
 thought
-bhar|rajniti
+bihar|rajniti
 naam
 
 bhag
@@ -3958,7 +3958,7 @@ snow
 salman
 amsterdam
 
-pakistah
+pakistan
 kick
 jacqueline
 message
@@ -4080,7 +4080,7 @@ modi
 announcing
 kam
 lcd
-Wai karana
+Wait karana
 way
 
 janta
@@ -4212,7 +4212,7 @@ pakistan
 Salman Khan
 
 haseen
-hind|bharat
+hind|bharath
 power|child hood
 
 dialogue delivery
@@ -4275,7 +4275,7 @@ gag
 modi
 fighting
 frnds
-polotics
+politics
 
 
 
@@ -4303,8 +4303,8 @@ papa
 frnds
 unleash
 
-tea india
-jarrort
+team india
+
 
 holiday
 
@@ -4319,7 +4319,7 @@ topper
 
 
 
-eid|bajarangi bahijaan
+
 ===
 
 russia
@@ -4382,7 +4382,7 @@ kaam
 
 rule
 papa
-atyachar
+atyachaar
 
 guddu
 sir
@@ -4393,7 +4393,7 @@ maa
 contra
 makeup
 logo
-swaeter
+sweater
 pic
 girlfriend
 
@@ -4409,7 +4409,7 @@ gross stuff
 keran bedi
 
 andhere
-polotics
+politics
 
 
 
@@ -4421,7 +4421,7 @@ mood
 leaving
 
 pm
-confidence|overconfidence
+confidence|overconfident
 mobile
 
 
@@ -4478,8 +4478,8 @@ mahi|match
 Apratim
 
 
-kiran bedi
-shot
+kiren bedi
+
 bjp
 modi
 money
@@ -4487,7 +4487,7 @@ money
 
 
 Bajrangi bhai jan
-gilrs
+girls
 bhaii
 Bharat mata
 
@@ -4761,7 +4761,7 @@ admin|updates
 anniversary
 prestige
 
-smodi
+modi
 Salman Khan
 cm
 man
@@ -4808,9 +4808,9 @@ Bajrangi bhaijan
 picture
 mummy
 sunday
-pappu
 
-anna
+
+pappu
 
 anna
 launda
@@ -4827,10 +4827,10 @@ step|relation
 
 
 lie
-khwab
+khawb
 
 pakistan wale
-handsm
+handsm???
 soch|vikas
 ganatantra divas
 channel
@@ -4899,7 +4899,7 @@ jeet
 
 Salman|bajrangi bhaijann
 amit shah|bhakto
-teami india
+team india
 delhi
 power
 salman
@@ -5044,7 +5044,7 @@ salman khan
 sweater|winter
 aamir khan
 Smuggling
-guruji
+
 andy carroll
 
 bhayiaa
@@ -5068,7 +5068,7 @@ film
 video
 
 
-aam admi
+aam aadmi
 
 zamaney
 
@@ -5083,14 +5083,14 @@ ganesh
 prabhu
 study
 come
-day|budget
+
 
 
 
 
 mantri
-anna
-|aam admi
+anna|aam admi
+
 
 Eid
 match
@@ -5116,7 +5116,7 @@ movies
 mom
 work
 Modi
-amm admi
+
 nebraska
 salman
 
@@ -5276,7 +5276,7 @@ concert
 guruji|youth
 
 movie
-sarkar
+sarkaar
 kejriwal
 guru
 virat|sikhar
@@ -5304,7 +5304,7 @@ dad
 acting
 modi
 laddoo
-ATAL 
+ATAL
 kiran bedi
 salman
 
@@ -5341,9 +5341,9 @@ msd
 alone|together
 modi
 pyar
-sukar
 
 film
+
 kunjiya
 movie
 
@@ -5357,8 +5357,8 @@ anna|kejriwal
 wifi
 Kiran
 match
-exaam
-bhia
+exam
+bhai
 film
 song
 
@@ -5373,7 +5373,7 @@ album
 queen
 world cup
 
-khosis
+khosies
 bill
 
 
@@ -5423,9 +5423,9 @@ sapna
 congress
 
 
+
 Work
 body
-
 
 
 
