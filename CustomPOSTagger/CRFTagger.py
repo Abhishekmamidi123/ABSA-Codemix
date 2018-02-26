@@ -33,8 +33,9 @@ ct.train(train_data, 'model.crf.tagger')
 gold_sentences = test_set
 print ct.evaluate(gold_sentences)
 
+print "Give a sentence..."
 # Test
-# test_sent = raw_input()
-# test_sent = test_sent.encode('utf-8').decode('utf-8').split(' ')
+test_sent = raw_input()
+test_sent = test_sent.encode('utf-8').decode('utf-8').split(' ')
 # print test_sent
-# print ct.tag_sents([test_sent])
+print ct.tag_sents([test_sent])
