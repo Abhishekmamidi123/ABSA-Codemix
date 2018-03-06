@@ -3,6 +3,7 @@ import json
 import pycrfsuite
 import numpy as np
 from random import shuffle
+from sklearn.svm import SVC
 from nltk.tag import CRFTagger
 from xml.etree import cElementTree as ET
 np.set_printoptions(threshold=np.nan)
@@ -149,7 +150,11 @@ shuffle(data)
 X = [extract_features(doc) for doc in data]
 y = [get_labels(doc) for doc in data]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
-trainer = pycrfsuite.Trainer(verbose=True)
+# trainer = pycrfsuite.Trainer(verbose=True)
+clf = SVC()
+clf.fit(X_train, y_train)
+
+'''
 for xseq, yseq in zip(X_train, y_train):
     trainer.append(xseq, yseq)
 trainer.set_params({
@@ -164,11 +169,15 @@ trainer.train('crf.model')
 tagger = pycrfsuite.Tagger()
 tagger.open('crf.model')
 y_pred = [tagger.tag(xseq) for xseq in X_test]
+'''
+clf.predict(X_test[3])
 
+'''
 i = 3
 for x, y in zip(y_pred[i], [x[1].split("=")[1] for x in X_test[i]]):
     print("%s (%s)" % (y, x))
-    
+
+ 
 labels = {"A": 0, "N": 1}
 
 predictions = np.array([labels[tag] for row in y_pred for tag in row])
@@ -193,3 +202,5 @@ print(classification_report(truths, predictions, target_names=["A", "N"]))
 
 # if np.array_equal(predictions,truths):
 #	print "Equal"
+
+'''
