@@ -12,6 +12,7 @@ from sklearn.model_selection import train_test_split
 filename = '../refinedData/final_codemix_data.json'
 open_file = open(filename, 'r')
 
+
 def word2features(doc, i):
     word = doc[i][0]
     features = [
@@ -23,7 +24,7 @@ def word2features(doc, i):
         'word[:2]=' + word[:2],
         'word.isupper=%s' % word.isupper(),
         'word.istitle=%s' % word.istitle(),
-        'word.isdigit=%s' % word.isdigit(),
+        #'word.isdigit=%s' % word.isdigit(),
         'word.contains#=%s' % str('#' in word),
         'word.contains@=%s' % str('@' in word)
     ]
@@ -37,7 +38,7 @@ def word2features(doc, i):
             '-1:word[:2]=' + word1[:2],
             '-1:word.istitle=%s' % word1.istitle(),
             '-1:word.isupper=%s' % word1.isupper(),
-            '-1:word.isdigit=%s' % word1.isdigit(),
+            #'-1:word.isdigit=%s' % word1.isdigit(),
 	    '-1:word.contains#=%s' % str('#' in word),
 	    '-1:word.contains@=%s' % str('@' in word)
         ])
@@ -53,7 +54,7 @@ def word2features(doc, i):
             '+1:word[:2]=' + word1[:2],
             '+1:word.istitle=%s' % word1.istitle(),
             '+1:word.isupper=%s' % word1.isupper(),
-            '+1:word.isdigit=%s' % word1.isdigit(),
+            #'+1:word.isdigit=%s' % word1.isdigit(),
             '+1:word.contains#=%s' % str('#' in word),
             '+1:word.contains@=%s' % str('@' in word)
         ])
@@ -69,7 +70,7 @@ def word2features(doc, i):
             '-2:word[:2]=' + word1[:2],
             '-2:word.istitle=%s' % word1.istitle(),
             '-2:word.isupper=%s' % word1.isupper(),
-            '-2:word.isdigit=%s' % word1.isdigit(),
+            #'-2:word.isdigit=%s' % word1.isdigit(),
             '-2:word.contains#=%s' % str('#' in word),
             '-2:word.contains@=%s' % str('@' in word)
         ])
@@ -83,7 +84,7 @@ def word2features(doc, i):
             '+2:word[:2]=' + word1[:2],
             '+2:word.istitle=%s' % word1.istitle(),
             '+2:word.isupper=%s' % word1.isupper(),
-            '+2:word.isdigit=%s' % word1.isdigit(),
+            #'+2:word.isdigit=%s' % word1.isdigit(),
             '+2:word.contains#=%s' % str('#' in word),
             '+2:word.contains@=%s' % str('@' in word)
         ])
@@ -97,7 +98,7 @@ def word2features(doc, i):
             '-3:word[:2]=' + word1[:2],
             '-3:word.istitle=%s' % word1.istitle(),
             '-3:word.isupper=%s' % word1.isupper(),
-            '-3:word.isdigit=%s' % word1.isdigit(),
+            #'-3:word.isdigit=%s' % word1.isdigit(),
             '-3:word.contains#=%s' % str('#' in word),
             '-3:word.contains@=%s' % str('@' in word)
         ])
@@ -111,7 +112,7 @@ def word2features(doc, i):
             '+3:word[:2]=' + word1[:2],
             '+3:word.istitle=%s' % word1.istitle(),
             '+3:word.isupper=%s' % word1.isupper(),
-            '+3:word.isdigit=%s' % word1.isdigit(),
+            #'+3:word.isdigit=%s' % word1.isdigit(),
             '+3:word.contains#=%s' % str('#' in word),
             '+3:word.contains@=%s' % str('@' in word)
         ])
@@ -144,52 +145,60 @@ for tweet in data_read:
 		l.append((text[i], tags[i]))
 	data.append(l)
 	c+=1
-shuffle(data)
+#shuffle(data)
 
 X = [extract_features(doc) for doc in data]
 y = [get_labels(doc) for doc in data]
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
-trainer = pycrfsuite.Trainer(verbose=True)
-for xseq, yseq in zip(X_train, y_train):
-    trainer.append(xseq, yseq)
-trainer.set_params({
-    'c1': 0.1, # 0.1
-    'c2': 0.01,  # 0.01
-    'max_iterations': 1000,
-    'feature.possible_transitions': True
-})
+print X[:1]
+l_corpus = len(X)
+Recall = []
+print 'Abhishek'
+for i in range(5):
+	X_train = X[:(l_corpus*i)/5] + X[(l_corpus*(i+1))/5 : ]
+	y_train = y[:(l_corpus*i)/5] + y[(l_corpus*(i+1))/5 : ]
+	X_test = X[(l_corpus*i)/5 : (l_corpus*(i+1))/5]
+	y_test = y[(l_corpus*i)/5 : (l_corpus*(i+1))/5]
 
-trainer.train('crf.model')
+	# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+	trainer = pycrfsuite.Trainer(verbose=True)
+	for xseq, yseq in zip(X_train, y_train):
+	    trainer.append(xseq, yseq)
+	trainer.set_params({
+	    'c1': 0.1, # 0.1
+	    'c2': 0.01,  # 0.01
+	    'max_iterations': 1000,
+	    'feature.possible_transitions': True
+	})
+	
+	trainer.train('crf.model')
+	
+	tagger = pycrfsuite.Tagger()
+	tagger.open('crf.model')
+	y_pred = [tagger.tag(xseq) for xseq in X_test]
+	
+	labels = {"A": 0, "N": 1}
+	
+	predictions = np.array([labels[tag] for row in y_pred for tag in row])
+	truths = np.array([labels[tag] for row in y_test for tag in row])
+	
+	# print predictions
+	# print truths
+	
+	aspects_matched = 0
+	count_aspects = 0
+	for i in range(len(predictions)):
+		if predictions[i] == truths[i] and predictions[i] == 0:
+			aspects_matched += 1
+		if truths[i] == 0:
+			count_aspects += 1
+	print aspects_matched
+	print count_aspects
+	print aspects_matched/float(count_aspects)
+	
+	Recall.append(aspects_matched/float(count_aspects))
 
-tagger = pycrfsuite.Tagger()
-tagger.open('crf.model')
-y_pred = [tagger.tag(xseq) for xseq in X_test]
-
-i = 3
-for x, y in zip(y_pred[i], [x[1].split("=")[1] for x in X_test[i]]):
-    print("%s (%s)" % (y, x))
-    
-labels = {"A": 0, "N": 1}
-
-predictions = np.array([labels[tag] for row in y_pred for tag in row])
-truths = np.array([labels[tag] for row in y_test for tag in row])
-
-print predictions
-print truths
-
-aspects_matched = 0
-count_aspects = 0
-for i in range(len(predictions)):
-	if predictions[i] == truths[i] and predictions[i] == 0:
-		aspects_matched += 1
-	if truths[i] == 0:
-		count_aspects += 1
-print aspects_matched
-print count_aspects
-print aspects_matched/float(count_aspects)
+print Recall
+print (Recall[0]+Recall[1]+Recall[2]+Recall[3]+Recall[4])/float(5)
 
 # Print out the classification report
-print(classification_report(truths, predictions, target_names=["A", "N"]))
-
-# if np.array_equal(predictions,truths):
-#	print "Equal"
+# print(classification_report(truths, predictions, target_names=["A", "N"]))
