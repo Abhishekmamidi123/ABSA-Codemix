@@ -64,10 +64,10 @@ print Y.shape
 labels = ['N', 'N', 'N', 'N', 'A', 'N', 'N', 'N', 'N', 'N', 'A', 'N', 'N', 'A', 'N', 'N', 'N', 'N', 'N', 'A']
 print len(labels)
 
-model = SVC().fit(np.array(pos_vectorized.toarray()), labels)
+clf = SVC()
+clf.verbose = True
+model = clf.fit(np.array(pos_vectorized.toarray()), labels)
 print model
-
-
 
 tests = [[ 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0.], [ 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0.]]
 print(model.predict(tests))

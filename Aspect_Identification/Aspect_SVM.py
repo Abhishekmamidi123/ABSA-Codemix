@@ -17,7 +17,7 @@ open_file = open(filename, 'r')
 
 def word2features(doc, i):
     word = doc[i][0]
-    print word
+    # print word
     features = {
         'bias': 'bias',
         #'word.lower': word.lower(),
@@ -155,23 +155,31 @@ for doc in data:
 	for (token, label) in doc:
 		y.append(label)
 l_corpus = len(X)
-
+del data_read
+del data
 print len(X)
 print len(y)
 Recall = []
 print 'Abhi'
 X_vectorized = vec.fit_transform(X)
+del X
 X = np.array(X_vectorized.toarray())
+del X_vectorized
 print X[2]
 
 for i in range(5):
-	X_train = np.concatenate(X[:(l_corpus*i)/5], X[(l_corpus*(i+1))/5 : ])
-	y_train = np.concatenate(y[:(l_corpus*i)/5], y[(l_corpus*(i+1))/5 : ])
+	X_train = np.concatenate((X[:(l_corpus*i)/5], X[(l_corpus*(i+1))/5 : ]))
+	y_train = np.concatenate((y[:(l_corpus*i)/5], y[(l_corpus*(i+1))/5 : ]))
 	X_test = X[(l_corpus*i)/5 : (l_corpus*(i+1))/5]
 	y_test = y[(l_corpus*i)/5 : (l_corpus*(i+1))/5]
-
-	model = SVC().fit(X_train, y_train)
+    
+	clf = SVC()
+	clf.verbose = True
+	print 'started'
+	model = clf.fit(X_train, y_train)
+	print 'Fit completed'
 	y_pred = model.predict(X_test)
+	print 'prediction completed'
 	print 'Hello'
 	labels = {"A": 0, "N": 1}
 	predictions = np.array([labels[tag] for row in y_pred for tag in row])
