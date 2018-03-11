@@ -17,6 +17,7 @@ def word2features(doc, i):
     word = doc[i][0]
     features = [
         'bias',
+        'word.position=%s' % str(i),
         'word.lower=' + word.lower(),
         'word[-3:]=' + word[-3:],
         'word[-2:]=' + word[-2:],
@@ -153,7 +154,7 @@ print X[:1]
 l_corpus = len(X)
 Recall = []
 print 'Abhishek'
-for i in range(5):
+for i in range(1):
 	X_train = X[:(l_corpus*i)/5] + X[(l_corpus*(i+1))/5 : ]
 	y_train = y[:(l_corpus*i)/5] + y[(l_corpus*(i+1))/5 : ]
 	X_test = X[(l_corpus*i)/5 : (l_corpus*(i+1))/5]
@@ -183,6 +184,19 @@ for i in range(5):
 	
 	# print predictions
 	# print truths
+	test_sentences = data[(l_corpus*i)/5 : (l_corpus*(i+1))/5]
+	print test_sentences
+	print y_pred
+	out_data = open('out_data.txt', 'w')
+	cnt1 = 0
+	for sentence in test_sentences:
+		cnt2 = 0
+		for word, tag in sentence:
+			out_data.write(str(word)+' '+str(tag)+' '+str(y_pred[cnt1][cnt2]))
+			out_data.write('\n')
+			cnt2+=1
+		out_data.write('\n')
+		cnt1+=1
 	
 	aspects_matched = 0
 	count_aspects = 0
@@ -194,6 +208,8 @@ for i in range(5):
 	print aspects_matched
 	print count_aspects
 	print aspects_matched/float(count_aspects)
+	
+
 	
 	Recall.append(aspects_matched/float(count_aspects))
 
