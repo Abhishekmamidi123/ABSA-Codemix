@@ -17,4 +17,6 @@
   - Hidden Markov Method(HMM): 18.014%
   
 #### Aspect Identification:
-- 
+- Till now, we applied CRF and SVM methods for identifying Aspects in a sentence.
+- CRF: We have used nearly 65 features(considering window length of 5) and achieved an accuracy of 44.73%.
+- SVM: We represented each word in the form of a vector and trained these vectors. We achieved an accuracy of ___%.
