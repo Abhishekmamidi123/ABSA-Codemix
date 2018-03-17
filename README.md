@@ -6,3 +6,15 @@
 #### Progress:
 - We have divided our project into two parts - Aspect Identification and Sentimental Analysis.
 - Working on Aspect Identification -- Ongoing work.
+
+## Contents:
+#### Parts of speech tagger for codemix:
+- Parts of speech plays an important role in Aspect Identication.
+- We have 1000 codemix tweets with annoatated parts-of-speech. We used this data for training.
+- We have trained the data using different Machine learning methods and achieved the following accuracies:
+  - Conditional Random Fields(CRF): 77.185%
+  - Trigram + Bigram + Unigram: 68.172%
+  - Hidden Markov Method(HMM): 18.014%
+  
+#### Aspect Identification:
+- 
