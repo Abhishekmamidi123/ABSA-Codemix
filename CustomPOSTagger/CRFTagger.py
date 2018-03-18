@@ -18,7 +18,7 @@ for page in list(root):
     data.append(l)
     count = count + 1
 shuffle(data)
-
+print len(data)
 # Divide data into train and test sets
 eightyPercent = count*0.9
 training_set = data[0:int(eightyPercent)]
