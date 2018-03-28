@@ -17,7 +17,7 @@ def word2features(doc, i):
     word = doc[i][0]
     features = [
         'bias',
-        'word.position=%s' % str(i),
+        # 'word.position=%s' % str(i),
         'word.lower=' + word.lower(),
         'word[-3:]=' + word[-3:],
         'word[-2:]=' + word[-2:],
@@ -99,7 +99,7 @@ def word2features(doc, i):
             '-3:word[:2]=' + word1[:2],
             '-3:word.istitle=%s' % word1.istitle(),
             '-3:word.isupper=%s' % word1.isupper(),
-            #'-3:word.isdigit=%s' % word1.isdigit(),
+            '-3:word.isdigit=%s' % word1.isdigit(),
             '-3:word.contains#=%s' % str('#' in word),
             '-3:word.contains@=%s' % str('@' in word)
         ])
@@ -113,7 +113,7 @@ def word2features(doc, i):
             '+3:word[:2]=' + word1[:2],
             '+3:word.istitle=%s' % word1.istitle(),
             '+3:word.isupper=%s' % word1.isupper(),
-            #'+3:word.isdigit=%s' % word1.isdigit(),
+            '+3:word.isdigit=%s' % word1.isdigit(),
             '+3:word.contains#=%s' % str('#' in word),
             '+3:word.contains@=%s' % str('@' in word)
         ])

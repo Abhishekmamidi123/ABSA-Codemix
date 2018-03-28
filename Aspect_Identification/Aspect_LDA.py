@@ -1,5 +1,6 @@
 import io
 import json
+import pickle
 import pycrfsuite
 import numpy as np
 from random import shuffle
@@ -49,7 +50,7 @@ def clean(doc):
 	punc_free = ''.join(ch for ch in stop_free if ch not in exclude)
 	return punc_free
 data = [clean(doc).split() for doc in data]
-print data
+# print data
 
 new_data = []
 for sentence in data:
@@ -62,13 +63,23 @@ data = new_data
 
 dictionary = corpora.Dictionary(data)
 doc_term_matrix = [dictionary.doc2bow(doc) for doc in data]
-print doc_term_matrix
+# print doc_term_matrix
 
 Lda = gensim.models.ldamodel.LdaModel
 ldamodel = Lda(doc_term_matrix, num_topics=6, id2word = dictionary, passes=50)
-print ldamodel[]
+filehandler = open('ldamodel.obj', 'w')
+pickle.dump(ldamodel, filehandler)
+# print ldamodel[]
 
-print(ldamodel.print_topics(num_topics=3, num_words=3))
-print(ldamodel.print_topics(num_topics=4, num_words=4))
-print(ldamodel.print_topics(num_topics=5, num_words=5))
-print(ldamodel.print_topics(num_topics=30, num_words=30))
+# print(ldamodel.print_topics(num_topics=3, num_words=3))
+# print(ldamodel.print_topics(num_topics=4, num_words=4))
+# print(ldamodel.print_topics(num_topics=5, num_words=5))
+print(ldamodel.print_topics(num_topics=6, num_words=6))
+
+print data[200]
+test_sent = data[200]
+# stop_free = " ".join([i for i in test_sent if i.lower() not in stop])
+# test_sent = ''.join(ch for ch in stop_free if ch not in exclude)
+print test_sent
+test_doc = data[200]
+print ldamodel[dictionary.doc2bow(test_sent)]
