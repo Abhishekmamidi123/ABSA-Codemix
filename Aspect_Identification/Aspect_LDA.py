@@ -10,11 +10,12 @@ from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
 import gensim
 from gensim import corpora
-from nltk.corpus import stopwords 
+from nltk.corpus import stopwords
 from nltk.stem.wordnet import WordNetLemmatizer
 import string
 stop = set(stopwords.words('english'))
 exclude = set(string.punctuation)
+hindi_stop_words = [u'hai', u'ki', u'ho', u'ko', u'ke', u'ka', u'h', u'se', u'bhi', u'hi', u'aap', u'u', u'k', u'ye', u'aur', u'p', u'tha', u'kya', u'kar', u'ji', u'd', u'ek', u'koi', u'nhi', u'mein', u'ne', u'pe', u'na', u'toh', u'kuch', u'ab', u'jo', u'httpURL', u'sab', u'par', u'hain', u'rt', u'b', u'2', u'tu', u'mai', u'hum', u'thi', u'main', u'apne', u'ni', u'kr', u'yaar', u'im', u'ha', u'wo', u'aa', u'v', u'hu', u'de', u'ap', u'amp', u'3', u'ur', u'r', u'ya', u'n', u'its', u'4', u'1', u'hua', u'1st', u'gya', u'yeh', u'le', u'apni']
 
 filename = '../refinedData/final_codemix_data.json'
 open_file = open(filename, 'r')
@@ -47,15 +48,25 @@ def clean(doc):
 	stop_free = " ".join([i for i in doc if i.lower() not in stop])
 	punc_free = ''.join(ch for ch in stop_free if ch not in exclude)
 	return punc_free
-data = [clean(doc).split() for doc in data]     
+data = [clean(doc).split() for doc in data]
 print data
+
+new_data = []
+for sentence in data:
+	sent = []
+	for word in sentence:
+		if word not in hindi_stop_words:
+			sent.append(word)
+	new_data.append(sent)
+data = new_data
 
 dictionary = corpora.Dictionary(data)
 doc_term_matrix = [dictionary.doc2bow(doc) for doc in data]
 print doc_term_matrix
 
 Lda = gensim.models.ldamodel.LdaModel
-ldamodel = Lda(doc_term_matrix, num_topics=3, id2word = dictionary, passes=50)
+ldamodel = Lda(doc_term_matrix, num_topics=6, id2word = dictionary, passes=50)
+print ldamodel[]
 
 print(ldamodel.print_topics(num_topics=3, num_words=3))
 print(ldamodel.print_topics(num_topics=4, num_words=4))
