@@ -12,7 +12,5 @@ from keras.layers.embeddings import Embedding
 from keras.preprocessing import sequence
 
 
-filename = '../refinedData/final_codemix_data.json'
+filename = '../../refinedData/final_codemix_data.json'
 open_file = open(filename, 'r')
-
-

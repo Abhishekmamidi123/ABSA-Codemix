@@ -23,7 +23,7 @@ print len(data)
 eightyPercent = count*0.9
 training_set = data[0:int(eightyPercent)]
 test_set = data[int(eightyPercent):]
-
+print training_set
 # Train
 ct = CRFTagger()
 train_data = training_set
