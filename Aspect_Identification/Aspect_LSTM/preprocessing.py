@@ -16,6 +16,7 @@ open_file = open(filename, 'r')
 c=1
 data_read = json.load(open_file)
 data = []
+y_tags = []
 for tweet in data_read:
 	aspects = tweet['aspects']
 	text = tweet['text'].split(' ')
@@ -33,9 +34,9 @@ for tweet in data_read:
 		# l.append((text[i], tags[i]))
 		if validators.url(text[i]) != True:
 			l.append(text[i].lower())
+	y_tags.append(tags)
 	data.append(l)
-	c+=1
-
+print data
 def clean(doc):
 	# print doc
 	stop_free = " ".join([i for i in doc if i.lower() not in stop_words])
@@ -80,7 +81,7 @@ for word in words_with_num:
 dictionary['words_to_num'] = words_to_num
 dictionary['num_to_words'] = num_to_words
 
-print data
+# print data
 
 # Representing Data in-terms of numbers
 final_data_representation = []
@@ -92,7 +93,18 @@ for sentence in data:
 		except:
 			l.append(0)
 	final_data_representation.append(l)
-print final_data_representation
+# print final_data_representation
 
-with open('data_in_numbers.txt', 'w') as file:
+with open('X_data.txt', 'w') as file:
 	file.write(str(final_data_representation))
+
+tag_num = {'A':0, 'N':1}
+
+print y_tags
+for i in range(len(y_tags)):
+	for j in range(len(y_tags[i])):
+		y_tags[i][j] = tag_num[y_tags[i][j]]
+print y_tags
+
+with open('y_data.txt', 'w') as file:
+	file.write(str(y_tags))
