@@ -80,3 +80,19 @@ for word in words_with_num:
 dictionary['words_to_num'] = words_to_num
 dictionary['num_to_words'] = num_to_words
 
+print data
+
+# Representing Data in-terms of numbers
+final_data_representation = []
+for sentence in data:
+	l = []
+	for word in sentence:
+		try:
+			l.append(words_to_num[word])
+		except:
+			l.append(0)
+	final_data_representation.append(l)
+print final_data_representation
+
+with open('data_in_numbers.txt', 'w') as file:
+	file.write(str(final_data_representation))
