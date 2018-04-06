@@ -30,23 +30,45 @@ for tweet in data_read:
 			tags[index] = "A"
 	count = 0
 	l = []
+	t = []
 	for i in range(len(text)):
 		# l.append((text[i], tags[i]))
 		if validators.url(text[i]) != True:
 			l.append(text[i].lower())
-	y_tags.append(tags)
+			t.append(tags[i])
+	y_tags.append(t)
 	data.append(l)
-print data
+# print data
+print len(data[820])
+print len(y_tags[820])
+
 def clean(doc):
 	# print doc
 	stop_free = " ".join([i for i in doc if i.lower() not in stop_words])
 	punc_free = ''.join(ch for ch in stop_free if ch not in exclude)
 	return punc_free
-data = [clean(doc).split() for doc in data]
+# data = [clean(doc).split() for doc in data]
+
+y_tags_refined = []
+data_refined = []
+for i in range(len(data)):
+	stopfree_list = []
+	tags = []
+	for j in range(len(data[i])):
+		if data[i][j].lower() not in stop_words:
+			stopfree_list.append(data[i][j])
+			tags.append(y_tags[i][j])
+	stop_free = " ".join(stopfree_list)
+	#punc_free = ''.join(ch for ch in stop_free if ch not in exclude)
+	data_refined.append(stopfree_list)
+	y_tags_refined.append(tags)
+print data[820]
+print len(data_refined[820])
+print len(y_tags_refined[820])
 
 words = []
 counts = []
-for sentence in data:
+for sentence in data_refined:
 	for word in sentence:
 		if word not in words:
 			if word not in stop_words:
@@ -55,8 +77,6 @@ for sentence in data:
 		else:
 			index = words.index(word)
 			counts[index]+=1
-print len(words)
-print len(counts)
 
 words_and_counts = zip(counts, words)
 words_and_counts.sort()
@@ -85,7 +105,7 @@ dictionary['num_to_words'] = num_to_words
 
 # Representing Data in-terms of numbers
 final_data_representation = []
-for sentence in data:
+for sentence in data_refined:
 	l = []
 	for word in sentence:
 		try:
@@ -100,11 +120,15 @@ with open('X_data.txt', 'w') as file:
 
 tag_num = {'A':0, 'N':1}
 
-print y_tags
-for i in range(len(y_tags)):
-	for j in range(len(y_tags[i])):
-		y_tags[i][j] = tag_num[y_tags[i][j]]
-print y_tags
+# print y_tags_refined
+for i in range(len(y_tags_refined)):
+	for j in range(len(y_tags_refined[i])):
+		y_tags_refined[i][j] = tag_num[y_tags_refined[i][j]]
+# print y_tags_refined
 
 with open('y_data.txt', 'w') as file:
-	file.write(str(y_tags))
+	file.write(str(y_tags_refined))
+	
+	
+print len(y_tags_refined)
+print len(final_data_representation)

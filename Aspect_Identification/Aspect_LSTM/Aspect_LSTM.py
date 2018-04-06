@@ -11,9 +11,18 @@ from keras.layers.embeddings import Embedding
 from keras.preprocessing import sequence
 from keras.utils import plot_model
 
-filename = 'data_in_numbers.txt'
-with open(filename, 'r') as file:
+X_filename = 'X_data.txt'
+with open(X_filename, 'r') as file:
 	X = eval(file.readline())
+
+y_filename = 'y_data.txt'
+with open(y_filename, 'r') as file:
+	y = eval(file.readline())
+
+print X
+print y
+print len(X)
+print len(y)
 
 np.random.seed(7)
 number_of_words = 6000
