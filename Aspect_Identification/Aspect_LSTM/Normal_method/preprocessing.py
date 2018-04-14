@@ -118,7 +118,7 @@ for sentence in data_refined:
 with open('X_data.txt', 'w') as file:
 	file.write(str(final_data_representation))
 
-tag_num = {'A':0, 'N':1}
+tag_num = {'N':0, 'A':1}
 
 # print y_tags_refined
 for i in range(len(y_tags_refined)):
