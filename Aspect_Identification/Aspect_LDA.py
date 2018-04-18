@@ -16,7 +16,7 @@ from nltk.stem.wordnet import WordNetLemmatizer
 import string
 stop = set(stopwords.words('english'))
 exclude = set(string.punctuation)
-hindi_stop_words = [u'hai', u'ki', u'ho', u'ko', u'ke', u'ka', u'h', u'se', u'bhi', u'hi', u'aap', u'u', u'k', u'ye', u'aur', u'p', u'tha', u'kya', u'kar', u'ji', u'd', u'ek', u'koi', u'nhi', u'mein', u'ne', u'pe', u'na', u'toh', u'kuch', u'ab', u'jo', u'httpURL', u'sab', u'par', u'hain', u'rt', u'b', u'2', u'tu', u'mai', u'hum', u'thi', u'main', u'apne', u'ni', u'kr', u'yaar', u'im', u'ha', u'wo', u'aa', u'v', u'hu', u'de', u'ap', u'amp', u'3', u'ur', u'r', u'ya', u'n', u'its', u'4', u'1', u'hua', u'1st', u'gya', u'yeh', u'le', u'apni']
+hindi_stop_words = [u'hai', u'ki', u'ho', u'ko', u'ke', u'ka', u'h', u'se', u'bhi', u'hi', u'aap', u'u', u'k', u'ye', u'aur', u'p', u'tha', u'kya', u'kar', u'ji', u'd', u'ek', u'koi', u'nhi', u'mein', u'ne', u'pe', u'na', u'toh', u'kuch', u'ab', u'jo', u'httpURL', u'sab', u'par', u'hain', u'rt', u'b', u'2', u'tu', u'mai', u'hum', u'thi', u'main', u'apne', u'ni', u'kr', u'yaar', u'im', u'ha', u'wo', u'aa', u'v', u'hu', u'de', u'ap', u'amp', u'3', u'ur', u'r', u'ya', u'n', u'its', u'4', u'1', u'hua', u'1st', u'gya', u'yeh', u'le', u'apni', '?']
 
 filename = '../refinedData/final_codemix_data.json'
 open_file = open(filename, 'r')
@@ -65,6 +65,12 @@ dictionary = corpora.Dictionary(data)
 doc_term_matrix = [dictionary.doc2bow(doc) for doc in data]
 # print doc_term_matrix
 
+filehandler = open('data.obj', 'w')
+pickle.dump(data, filehandler)
+
+filehandler = open('dictionary.obj', 'w')
+pickle.dump(dictionary, filehandler)
+
 Lda = gensim.models.ldamodel.LdaModel
 ldamodel = Lda(doc_term_matrix, num_topics=6, id2word = dictionary, passes=50)
 filehandler = open('ldamodel.obj', 'w')
@@ -75,7 +81,7 @@ pickle.dump(ldamodel, filehandler)
 # print(ldamodel.print_topics(num_topics=4, num_words=4))
 # print(ldamodel.print_topics(num_topics=5, num_words=5))
 print(ldamodel.print_topics(num_topics=6, num_words=6))
-
+print data[0]
 print data[200]
 test_sent = data[200]
 # stop_free = " ".join([i for i in test_sent if i.lower() not in stop])
