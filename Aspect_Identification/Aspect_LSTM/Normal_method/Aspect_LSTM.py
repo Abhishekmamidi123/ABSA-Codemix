@@ -11,7 +11,8 @@ from keras.layers.embeddings import Embedding
 from keras.preprocessing import sequence
 from keras.utils import plot_model
 
-X_filename = 'X_data.txt'
+# X - converted into numbers. 0 if not present in the corpus
+X_filename = 'X_data_numbers.txt'
 with open(X_filename, 'r') as file:
 	X = eval(file.readline())
 

@@ -1,11 +1,12 @@
 import json
 import string
+import pickle
 import validators
 from nltk.corpus import stopwords
 exclude = set(string.punctuation)
 english_stopwords = set(stopwords.words('english'))
 english_stopwords.add('')
-hindi_stopwords = set([u'hai', u'ki', u'ho', u'ko', u'ke', u'ka', u'h', u'se', u'bhi', u'hi', u'aap', u'u', u'k', u'ye', u'aur', u'p', u'tha', u'kya', u'kar', u'ji', u'd', u'ek', u'koi', u'nhi', u'mein', u'ne', u'pe', u'na', u'toh', u'kuch', u'ab', u'jo', u'httpURL', u'sab', u'par', u'hain', u'rt', u'b', u'2', u'tu', u'mai', u'hum', u'thi', u'main', u'apne', u'ni', u'kr', u'yaar', u'im', u'ha', u'wo', u'aa', u'v', u'hu', u'de', u'ap', u'amp', u'3', u'ur', u'r', u'ya', u'n', u'its', u'4', u'1', u'hua', u'1st', u'gya', u'yeh', u'le', u'apni'])
+hindi_stopwords = set([u'hai', u'ki', u'ho', u'ko', u'ke', u'ka', u'h', u'se', u'bhi', u'hi', u'aap', u'u', u'k', u'ye', u'aur', u'p', u'tha', u'kya', u'kar', u'ji', u'd', u'ek', u'koi', u'nhi', u'mein', u'ne', u'pe', u'na', u'toh', u'kuch', u'ab', u'jo', u'httpURL', u'sab', u'par', u'hain', u'rt', u'b', u'2', u'tu', u'mai', u'hum', u'thi', u'main', u'apne', u'ni', u'kr', u'yaar', u'im', u'ha', u'wo', u'aa', u'v', u'hu', u'de', u'ap', u'amp', u'3', u'ur', u'r', u'ya', u'n', u'its', u'4', u'1', u'hua', u'1st', u'gya', u'yeh', u'le', u'apni', ':@'])
 stop_words = hindi_stopwords|english_stopwords
 
 # print stop_words
@@ -62,7 +63,7 @@ for i in range(len(data)):
 	#punc_free = ''.join(ch for ch in stop_free if ch not in exclude)
 	data_refined.append(stopfree_list)
 	y_tags_refined.append(tags)
-print data[820]
+print data_refined[820]
 print len(data_refined[820])
 print len(y_tags_refined[820])
 
@@ -78,6 +79,7 @@ for sentence in data_refined:
 			index = words.index(word)
 			counts[index]+=1
 
+print data_refined
 words_and_counts = zip(counts, words)
 words_and_counts.sort()
 words_and_counts = words_and_counts[::-1]
@@ -101,8 +103,8 @@ for word in words_with_num:
 dictionary['words_to_num'] = words_to_num
 dictionary['num_to_words'] = num_to_words
 
-# print data
-
+print data_refined[0]
+print num_to_words[6]
 # Representing Data in-terms of numbers
 final_data_representation = []
 for sentence in data_refined:
@@ -115,7 +117,10 @@ for sentence in data_refined:
 	final_data_representation.append(l)
 # print final_data_representation
 
-with open('X_data.txt', 'w') as file:
+with open('X_data.pkl', 'wb') as file:
+	pickle.dump(data_refined, file)
+
+with open('X_data_numbers.txt', 'w') as file:
 	file.write(str(final_data_representation))
 
 tag_num = {'N':0, 'A':1}
@@ -132,3 +137,6 @@ with open('y_data.txt', 'w') as file:
 	
 print len(y_tags_refined)
 print len(final_data_representation)
+
+#with open('Aspect_LSTM/Normal_method/X_data.pkl', 'r') as file:
+#	X_words = pickle.load(file)
