@@ -16,28 +16,37 @@ from keras import backend as K
 
 visible = Input(shape=(100,1))
 
-conv1 = Conv1D(filters=32, kernel_size=4, activation='relu')(visible)
+hidden1 = LSTM(100, return_sequences = True)(visible)
+hidden2 = LSTM(100)(hidden1)
+
+hidden3 = LSTM(100, return_sequences = True)(visible)
+hidden4 = LSTM(100)(hidden3)
+
+hidden5 = LSTM(100, return_sequences = True)(visible)
+hidden6 = LSTM(100)(hidden5)
+
+merge = concatenate([hidden2, hidden4, hidden6])
+print type(merge.shape[1])
+merge = Reshape((300, 1))(merge)
+conv1 = Conv1D(filters=32, kernel_size=4, activation='relu')(merge)
 drop1 = Dropout(0.5)(conv1)
 pool1 = MaxPooling1D(pool_size=2)(drop1)
 flat1 = Flatten()(pool1)
 
-conv2 = Conv1D(filters=32, kernel_size=4, activation='relu')(visible)
+conv2 = Conv1D(filters=32, kernel_size=4, activation='relu')(merge)
 drop2 = Dropout(0.5)(conv2)
 pool2 = MaxPooling1D(pool_size=2)(drop2)
 flat2 = Flatten()(pool2)
 
-conv3 = Conv1D(filters=32, kernel_size=4, activation='relu')(visible)
+conv3 = Conv1D(filters=32, kernel_size=4, activation='relu')(merge)
 drop3 = Dropout(0.5)(conv3)
 pool3 = MaxPooling1D(pool_size=2)(drop3)
 flat3 = Flatten()(pool3)
 
 merge = concatenate([flat1, flat2, flat3])
-merge = Reshape((4608, 1))(merge)
 
-hidden1 = LSTM(10, return_sequences = True)(merge)
-hidden2 = LSTM(10)(hidden1)
-output = Dense(1)(hidden2)
+output = Dense(1)(merge)
 model = Model(inputs = visible, outputs = output)
 
 model.summary()
-plot_model(model, '3_model.png' ,show_shapes=True, show_layer_names=True)
+plot_model(model, '3_model_2.png' ,show_shapes=True, show_layer_names=True)
