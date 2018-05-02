@@ -14,9 +14,9 @@ def run_LDA(data):
 	doc_term_matrix = [dictionary.doc2bow(doc) for doc in data]
 	Lda = gensim.models.ldamodel.LdaModel
 	ldamodel = Lda(doc_term_matrix, num_topics=6, id2word = dictionary, passes=50)
-	filehandler = open('ldamodel.obj', 'w')
+	filehandler = open('0_ldamodel.obj', 'w')
 	pickle.dump(ldamodel, filehandler)
-	filehandler = open('dictionary.obj', 'w')
+	filehandler = open('0_dictionary.obj', 'w')
 	pickle.dump(dictionary, filehandler)
 	
 with open('X_data.pkl', 'r') as file:
@@ -26,9 +26,9 @@ tag_num = {'N':0, 'A':1}
 with open('y_data.txt', 'r') as file:
 	y = eval(file.readline())
 
-filehandler = open('ldamodel.obj', 'r')
+filehandler = open('0_ldamodel.obj', 'r')
 ldamodel = pickle.load(filehandler)
-filehandler = open('../dictionary.obj', 'r')
+filehandler = open('0_dictionary.obj', 'r')
 dictionary = pickle.load(filehandler)
 
 # run_LDA(X)
@@ -38,12 +38,12 @@ count = 0
 X_LDA_words = []
 for sent in X:
 	print '\n'
-	if count == 8:
+	if count == 30:
 		break
 	topics = ldamodel[dictionary.doc2bow(sent)]
 	print sent
 	print y[count]
-	# print topics
+	#print topics
 	topic_ids = []
 	for topic in topics:
 		if topic[1] > threshold:
@@ -59,8 +59,6 @@ for sent in X:
 	X_LDA_words.append(x_lda)
 	count+=1
 print X_LDA_words
-
-
 
 #print X[200]
 #topics = ldamodel[dictionary.doc2bow(X[200])]

@@ -134,7 +134,6 @@ for i in range(len(y_tags_refined)):
 with open('y_data.txt', 'w') as file:
 	file.write(str(y_tags_refined))
 	
-	
 print len(y_tags_refined)
 print len(final_data_representation)
 
