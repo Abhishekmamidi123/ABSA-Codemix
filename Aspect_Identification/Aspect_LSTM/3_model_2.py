@@ -14,15 +14,17 @@ from keras.layers.merge import concatenate
 from keras.layers.recurrent import LSTM
 from keras import backend as K
 
-visible = Input(shape=(100,1))
+visible1 = Input(shape=(100,1))
+visible2 = Input(shape=(100,1))
+visible3 = Input(shape=(100,1))
 
-hidden1 = LSTM(100, return_sequences = True)(visible)
+hidden1 = LSTM(100, return_sequences = True)(visible1)
 hidden2 = LSTM(100)(hidden1)
 
-hidden3 = LSTM(100, return_sequences = True)(visible)
+hidden3 = LSTM(100, return_sequences = True)(visible2)
 hidden4 = LSTM(100)(hidden3)
 
-hidden5 = LSTM(100, return_sequences = True)(visible)
+hidden5 = LSTM(100, return_sequences = True)(visible3)
 hidden6 = LSTM(100)(hidden5)
 
 merge = concatenate([hidden2, hidden4, hidden6])
@@ -45,8 +47,9 @@ flat3 = Flatten()(pool3)
 
 merge = concatenate([flat1, flat2, flat3])
 
-output = Dense(1)(merge)
-model = Model(inputs = visible, outputs = output)
+output = Dense(2048)(merge)
+output = Dense(1)(output)
+model = Model(inputs = [visible1, visible2, visible3], outputs = output)
 
 model.summary()
 plot_model(model, '3_model_2.png' ,show_shapes=True, show_layer_names=True)
