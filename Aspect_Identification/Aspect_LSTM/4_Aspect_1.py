@@ -13,6 +13,7 @@ from keras.layers.convolutional import MaxPooling1D
 from keras.layers.merge import concatenate
 from keras.layers.recurrent import LSTM
 from keras import backend as K
+from sklearn.metrics import classification_report
 
 def load_data():
 	with open('X_data.pkl', 'r') as file:
@@ -45,7 +46,7 @@ def create_model():
 	merge = concatenate([flat1, flat2, flat3])
 	output = Dense(1)(merge)
 	model = Model(inputs = visible, outputs = output)
-	plot_model(model, '3_model_1.png' ,show_shapes=True, show_layer_names=True)
+	#plot_model(model, '3_model_1.png' ,show_shapes=True, show_layer_names=True)
 	return model
 
 def concat_X(X):
@@ -58,7 +59,6 @@ def preprocess_data_and_save(X_data, y_data, encoded_docs, vector_length, X_c):
 	dont_train = [190, 476, 511, 518, 567, 571, 579, 797, 801, 1222, 1389, 2058, 2532]
 	dividing_point = int(len(X_c)*0.8)
 	X_train = []
-	# X_train = np.array([])
 	y_train = []
 	count = 0
 	print dividing_point
@@ -82,27 +82,22 @@ def preprocess_data_and_save(X_data, y_data, encoded_docs, vector_length, X_c):
 				X_train.append(vector)
 				print vector.shape
 				y_train.append(y_data[i][j])
-#	X_train = np.array(X_train)
-#	print X_train.shape
-#	np.save('X_train_model1.npy', X_train)
-#	np.save('y_train_model1.npy', np.array(y_train))
-
 	
 	print "Started Training"
 	model.compile(loss = 'binary_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
-	model.fit(np.array(X_train), np.array(y_train), epochs=5, batch_size=32)
-	#score_train, accuracy_train = model.evaluate(X_train, y_train)
-	#print score_train, accuracy_train
+	model.fit(np.array(X_train), np.array(y_train), epochs=10, batch_size=16)
+	model.save('4_model.h5')
+	score_train, accuracy_train = model.evaluate(np.array(X_train), np.array(y_train))
 	
-	X_test = np.array([])
+	X_test = []
 	y_test = []
 	count = 0
+	print dividing_point
 	for i in range(dividing_point, len(X_c)):
-		break
 		print i
 		if i not in dont_train:
-			vector = encoded_docs[i]
-			vector = np.reshape(vector, (1, vector.shape[0]))
+			sentence_vector = encoded_docs[i]
+			sentence_vector = np.reshape(sentence_vector, (1, sentence_vector.shape[0]))
 			for j in range(len(X_data[i])):
 				word_vector = np.zeros(vector_length)
 				word = X_data[i][j]
@@ -113,20 +108,17 @@ def preprocess_data_and_save(X_data, y_data, encoded_docs, vector_length, X_c):
 					if y_data[i][j] == 1:
 						count+=1
 				word_vector = np.reshape(word_vector, (1, word_vector.shape[0]))
-				if X_test.shape[0] == 0:
-					X_test = np.append(word_vector, vector)
-					X_test = np.reshape(X_test, (1, X_test.shape[0]))
-					print X_test.shape
-				else:
-					s = np.append(word_vector, vector)
-					s = np.reshape(s, (1, s.shape[0]))
-					X_test = np.concatenate((X_test, s))
-					print X_test.shape
+				vector = np.append(word_vector, sentence_vector)
+				vector = np.reshape(vector, (vector.shape[0], 1))
+				X_test.append(vector)
+				print vector.shape
 				y_test.append(y_data[i][j])
-	print X_test.shape
-	np.save('X_test_model1.npy', X_test)
-	np.save('y_test_model1.npy', np.array(y_test))
-
+	
+	score_test, accuracy_test = model.evaluate(np.array(X_test), np.array(y_test))
+	print score_test, accuracy_test
+	y_pred = model.predict(np.array(X_test))
+	print(classification_report(np.array(y_test), np.array(y_pred), target_names=["A", "N"]))
+	
 X_data,y_data = load_data()
 model = create_model()
 X_c = concat_X(X_data)
