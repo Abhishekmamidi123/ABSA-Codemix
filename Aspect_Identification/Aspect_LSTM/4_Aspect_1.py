@@ -22,7 +22,7 @@ def load_data():
 	return X, y
 
 def create_model():
-	visible = Input(shape=(100,1))
+	visible = Input(shape=(18540,1))
 	hidden1 = LSTM(200, return_sequences = True)(visible)
 	hidden2 = LSTM(100)(hidden1)
 	hidden2 = Reshape((100, 1))(hidden2)
@@ -65,8 +65,8 @@ def preprocess_data_and_save(X_data, y_data, encoded_docs, vector_length, X_c):
 	for i in range(dividing_point):
 		print i
 		if i not in dont_train:
-			vector = encoded_docs[i]
-			vector = np.reshape(vector, (1, vector.shape[0]))
+			sentence_vector = encoded_docs[i]
+			sentence_vector = np.reshape(sentence_vector, (1, sentence_vector.shape[0]))
 			for j in range(len(X_data[i])):
 				word_vector = np.zeros(vector_length)
 				word = X_data[i][j]
@@ -77,25 +77,22 @@ def preprocess_data_and_save(X_data, y_data, encoded_docs, vector_length, X_c):
 					if y_data[i][j] == 1:
 						count+=1
 				word_vector = np.reshape(word_vector, (1, word_vector.shape[0]))
-				#if X_train.shape[0] == 0:
-				if len(X_train) == 0:
-					X_train.append(np.append(word_vector, vector))
-					#X_train = np.append(word_vector, vector)
-					#X_train = np.reshape(X_train, (1, X_train.shape[0]))
-					#print X_train.shape
-				else:
-					X_train.append(np.append(word_vector, vector))
-					#s = np.append(word_vector, vector)
-					#print s
-					#s = np.reshape(s, (1, s.shape[0]))
-					#X_train = np.concatenate((X_train, s))
-					#print X_train.shape
-					print len(X_train)
+				vector = np.append(word_vector, sentence_vector)
+				vector = np.reshape(vector, (vector.shape[0], 1))
+				X_train.append(vector)
+				print vector.shape
 				y_train.append(y_data[i][j])
-	X_train = np.array(X_train)
-	print X_train.shape
-	np.save('X_train_model1.npy', X_train)
-	np.save('y_train_model1.npy', np.array(y_train))
+#	X_train = np.array(X_train)
+#	print X_train.shape
+#	np.save('X_train_model1.npy', X_train)
+#	np.save('y_train_model1.npy', np.array(y_train))
+
+	
+	print "Started Training"
+	model.compile(loss = 'binary_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
+	model.fit(np.array(X_train), np.array(y_train), epochs=5, batch_size=32)
+	#score_train, accuracy_train = model.evaluate(X_train, y_train)
+	#print score_train, accuracy_train
 	
 	X_test = np.array([])
 	y_test = []
